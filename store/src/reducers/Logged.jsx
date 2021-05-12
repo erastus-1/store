@@ -1,9 +1,15 @@
-const loggedReducer = (state = false, action) => {
+import { FETCH_POST, NEW_POST} from '../actions/Types';
+
+
+const initialState = {
+    items: [],
+    item: {}
+}
+
+export default function( state = initialState, action) {
     switch(action.type){
-        case 'SIGN_IN':
-            return !state;
-        default:
-            return state;
+        default: 
+        return state;
     }
-};
-export default loggedReducer;
+
+}
