@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import  {fetchPost } from '../actions/PostAction'
 
@@ -21,9 +22,14 @@ class login extends Component {
   }
 }
 
+login.propType = {
+    fetchPost: PropTypes.func.isRequired,
+    login: PropTypes.array.isRequired
+}
+
 const mapStateToProps = state => ({
-  logged: logged.state.items,
+  login: login.state.items,
 
 });
 
-export default connect (null, {fetchPost}) (post);
+export default connect (mapStateToProps, {fetchPost}) (post);
