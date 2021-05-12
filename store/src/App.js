@@ -1,9 +1,12 @@
 import './App.css';
+import Login from './components/Login';
+import LoginForm from './components/LoginForm';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello Store!!</h1>
+    <div>
+    {/* <Login /> */}
+    <LoginForm />
     </div>
   );
 }
