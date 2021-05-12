@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import  {fetchPost } from '../actions/PostAction'
 
 class login extends Component {
+
+  componentWillMount(){
+    this.props.fetchPost();
+  }
   render() {
-    const loginItems = this.state.post.map( login =>(
+    const loginItems = this.props.post.map( login =>(
       <div key= {login.id}>
       </div>
     ));
@@ -15,4 +21,9 @@ class login extends Component {
   }
 }
 
-export default login;
+const mapStateToProps = state => ({
+  logged: logged.state.items,
+
+});
+
+export default connect (null, {fetchPost}) (post);

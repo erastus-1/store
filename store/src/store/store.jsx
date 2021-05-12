@@ -1,6 +1,6 @@
 import { createStore, applyMildware} from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers/Index';
+import rootReducer from '../reducers/Index';
 
 
 const initialState = {};
