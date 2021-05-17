@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import  {fetchPost } from '../actions/PostAction'
 
@@ -9,7 +9,7 @@ class login extends Component {
     this.props.fetchPost();
   }
   render() {
-    const loginItems = this.props.post.map( login =>(
+    const loginItems = this.props.login.map( login =>(
       <div key= {login.id}>
       </div>
     ));
@@ -22,7 +22,7 @@ class login extends Component {
   }
 }
 
-login.propType = {
+login.propTypes = {
     fetchPost: PropTypes.func.isRequired,
     login: PropTypes.array.isRequired
 }
@@ -32,4 +32,4 @@ const mapStateToProps = state => ({
 
 });
 
-export default connect (mapStateToProps, {fetchPost}) (post);
+export default connect (mapStateToProps, {fetchPost}) (login);

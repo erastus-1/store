@@ -1,4 +1,5 @@
 import { FETCH_POST, NEW_POST} from './Types';
+import login from '../components/Login'
 
 
 export const fetchPost =()=> dispatch => {
@@ -7,6 +8,6 @@ export const fetchPost =()=> dispatch => {
     .then(data => 
         dispatch({
         type: FETCH_POST,
-        payload : post
+        payload : login
     }));
 }

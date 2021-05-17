@@ -2,7 +2,7 @@ import './App.css';
 import Login from './components/Login';
 import LoginForm from './components/LoginForm';
 import { provider } from 'react-redux';
-import { store } from './store/store';
+import  store  from './store/store';
 
 function App() {
   return (
